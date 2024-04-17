@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    color: #272727;
+}
+
+body::-webkit-scrollbar {
+    width: 12px; /* Ширина всего элемента навигации */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #fff; /* Цвет дорожки */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #48664e; /* Цвет бегунка */
+    border-radius: 20px; /* Округление бегунка */
+    border: 3px solid rgba(51, 180, 84, 0.5); /* Оформление границ бегунка */
+  }
+  
+
+main{
+    background-image: url(../static/img/bg_theme.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    background-image: url(../static/img/header.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header p{
+    font-size: 30px;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #48664e;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.navbar li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    background-color: #111;
+  }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+  
+.sticky + .theme {
+    padding-top: 60px;
+}
+
+.theme{
+    /* height: 43vh; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; */
+    padding-bottom: 2vh;
+    color: #000000;
+}
+
+.theme p{
+    background: rgba(255, 255, 255, 0.5); /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+    max-width: 97vw;
+    margin: auto;
+    margin-top: 10px;
+    font-size: 25px;
+    line-height: 1.5;
+    text-align: center
+}
+
+.reasons{
+    background: rgba(99, 245, 245, 0.5);
+    padding: 10px;
+    max-width: 97vw;
+    margin: auto;
+    font-size: 25px;
+    line-height: 1.5;
+    margin-bottom: 2vh;
+}
+
+.solution{
+    padding-top: 5vh;
+    background: rgba(0, 255, 255, 0.7);
+    padding: 10px; /* Поля вокруг текста */
+    max-width: 97vw;
+    margin: auto;
+    font-size: 25px;
+    line-height: 1.5;
+    margin-bottom: 2vh;
+}
+
+.check{
+    background: rgba(53, 196, 150, 0.8);
+    padding: 10px; /* Поля вокруг текста */
+    max-width: 97vw;
+    margin: auto;
+    font-size: 25px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.test{
+    text-decoration: none;
+    border: #fff;
+}

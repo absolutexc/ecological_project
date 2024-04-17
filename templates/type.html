@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  >
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../static/style.css">
+  <title>Экологичность промышленных предприятий</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__text">
+      <h1>Рассчитайте экологичность Вашего промышленного предприятия</h1>
+      <p>Сделайте экологию лучше!</p>
+    </div>
+  </header>
+  <main>
+    {% block content %}
+    <h2 class="main__title">Выберите класс Вашего производства:</h2>
+    <ul class="list" id="list">
+      <li class="list__item">
+        <a href={{second + "/4"}}>
+          <img class="item__img" src="../static/img/greensign.png">
+          <span>Малоопасное</span></a>
+      </li>
+      <li class="list__item">
+        <a href={{second + "/7"}}>
+          <img class="item__img" src="../static/img/yellowsign.png">
+          <span>Опасное</span></a>
+      </li>
+      <li class="list__item">
+        <a href={{second + "/9"}}>
+          <img class="item__img" src="../static/img/redsign.png">
+          <span>Особо опасное</span></a>
+      </li>
+      <!-- <li class="list__item">
+        <a href={{second + "/12"}}>
+          <img class="item__img" src="../static/img/ecosign.png">
+          <span>Безопасное</span></a>
+      </li> -->
+    </ul>
+    {% endblock %}
+  </main>
+  <footer>
+
+  </footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  >
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../static/style.css"> 
+  <title>Экологичность промышленных предприятий</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__text">
+      <h1>Рассчитайте экологичность Вашего промышленного предприятия</h1>
+      <p>Сделайте экологию лучше!</p>
+    </div>
+  </header>
+  <main>
+    {% block content %}
+    <h2 class="main__title main__title--margin">Энергоэффективность Вашего предприятия:</h2>
+    <div class="main__rez" id="end">
+        {%if result <= 150%}
+        <span>Ваш результат {{result}} CO2e (эквивалент углекислого газа)</span>
+        <span>Ваше предприятие оказывает минимальный вред окружающей среде!</span>
+        <img class="rez__img" src="../../static/img/eco_pred.jpg">
+        {%elif result >= 151 and result < 300%}
+        <span>Ваш результат {{result}} CO2e (эквивалент углекислого газа)</span>
+        <span>Ваше предприятие оказывает умеренный вред окружающей среде!</span>
+        <img class="rez__img" src="../../static/img/med_pred.jpg">
+        <span>Хотите помочь экологии? Заполните форму и мы соберем вам экологичную сборку!</span>
+        <a class="main_link" href="{{ url_for('form') }}">Заполнить форму</a>
+        {%elif result >= 300%}
+        <span>Ваш результат {{result}} CO2e (эквивалент углекислого газа)</span>
+        <span>Ваше предприятие оказывает большой вред окружающей среде!</span>
+        <img class="rez__img" src="../../static/img/hard_pred.jpg">
+        <span>Хотите помочь экологии? Заполните форму и мы соберем вам экологичную сборку!</span>
+        <a class="main_link" href="{{ url_for('form') }}">Заполнить форму</a>
+        {%endif%}
+    </div>
+    {% endblock %}
+  </main>
+  <footer>
+
+  </footer>
+</body>
+</html>
